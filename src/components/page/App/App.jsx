@@ -10,25 +10,17 @@ function App() {
 
   return (
     <div className="App">
-      <div>
-        <a href="https://reactjs.org" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
+      <div className="button-test">
         <Button variant="contained" onClick={() => setCount((count) => count + 1)}>
           count is {count}
         </Button>
         <TextField id="outlined-basic" label="Outlined" variant="outlined" />
 
         <p>
-          Edit <code>src/App.jsx</code> eiei save to test HMR
+          test mui import
         </p>
       </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+
     </div>
   )
 }
