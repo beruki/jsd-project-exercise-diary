@@ -63,7 +63,7 @@ export default function App() {
         <CardMedia
           component="img"
           height="188"
-          image="../../../../public/running-desk.png"
+          image="../../../../public/run-desk.png"
           alt="running"
         />
 
