@@ -1,10 +1,4 @@
-import { Box, createTheme, ThemeProvider } from '@mui/material';
-import Button from '@mui/material/Button';
-import Stack from '@mui/material/Stack';
-import { TextField } from '@mui/material';
-import * as React from 'react';
-import './App.css';
-import '../../button/button.css';
+import React from 'react';
 import Card from '@mui/material/Card';
 import CardHeader from '@mui/material/CardHeader';
 import CardMedia from '@mui/material/CardMedia';
@@ -13,21 +7,17 @@ import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
 import MoreVertIcon from '@mui/icons-material/MoreVert';
 import Chip from '@mui/material/Chip';
+import './App.css';
 
-
-export default function App() {
-  const theme = createTheme({
-    
-  });
-
-  return (
-    <ThemeProvider theme={theme}>
-      <Box>
-        <h1>Your Activities</h1>
-        <Button className='Secondary-Button' sx={{borderColor: 'rgba(178, 31, 31, 1)'}} variant="outlined">Add your data</Button>
-      </Box>
-      <Box display="flex" flexDirection="row" alignItems="stretch" padding={0}>
-        <Stack padding={5}>
+export default function All_Card() {
+    const theme = createTheme({
+      
+    });
+  
+    return ( 
+  
+      <Box display="flex" flexDirection="row" alignItems="stretch" padding={16}>
+        <Stack>
           <Card sx={{ maxWidth: 345 , maxHeight: 500 }} className='Run-card'>
           <CardHeader
             action={
@@ -60,7 +50,7 @@ export default function App() {
           </Card>
         </Stack>
   
-        <Stack padding={5}>
+        <Stack>
         <Card sx={{ maxWidth: 345 , maxHeight: 500 }} className='Swim-card'>
           <CardHeader
             action={
@@ -93,7 +83,7 @@ export default function App() {
           </Card>
         </Stack>
   
-        <Stack padding={5}>
+        <Stack>
         <Card sx={{ maxWidth: 345 , maxHeight: 500 }} className='Hike-card'>
           <CardHeader
             action={
@@ -126,7 +116,7 @@ export default function App() {
           </Card>
         </Stack>
   
-        <Stack padding={5}>
+        <Stack>
         <Card sx={{ maxWidth: 345 , maxHeight: 500 }} className='Bike-card'>
           <CardHeader 
             action={
@@ -158,9 +148,7 @@ export default function App() {
           </CardContent>
           </Card>
         </Stack>
-
-        
       </Box>
-    </ThemeProvider>
-  );
-}
+    );
+  }
+  
