@@ -1,4 +1,6 @@
 import React from 'react';
+import { Box, createTheme, ThemeProvider } from '@mui/material';
+import Stack from '@mui/material/Stack';
 import Card from '@mui/material/Card';
 import CardHeader from '@mui/material/CardHeader';
 import CardMedia from '@mui/material/CardMedia';
@@ -7,17 +9,16 @@ import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
 import MoreVertIcon from '@mui/icons-material/MoreVert';
 import Chip from '@mui/material/Chip';
-import './App.css';
+import './AllCard.css';
 
-export default function All_Card() {
+export default function AllCard() {
     const theme = createTheme({
       
     });
   
     return ( 
-  
-      <Box display="flex" flexDirection="row" alignItems="stretch" padding={16}>
-        <Stack>
+      <Box display="flex" flexDirection="row" alignItems="stretch" padding={0}>
+        <Stack padding={5}>
           <Card sx={{ maxWidth: 345 , maxHeight: 500 }} className='Run-card'>
           <CardHeader
             action={
@@ -50,7 +51,7 @@ export default function All_Card() {
           </Card>
         </Stack>
   
-        <Stack>
+        <Stack padding={5}>
         <Card sx={{ maxWidth: 345 , maxHeight: 500 }} className='Swim-card'>
           <CardHeader
             action={
@@ -83,7 +84,7 @@ export default function All_Card() {
           </Card>
         </Stack>
   
-        <Stack>
+        <Stack padding={5}>
         <Card sx={{ maxWidth: 345 , maxHeight: 500 }} className='Hike-card'>
           <CardHeader
             action={
@@ -116,7 +117,7 @@ export default function All_Card() {
           </Card>
         </Stack>
   
-        <Stack>
+        <Stack padding={5}>
         <Card sx={{ maxWidth: 345 , maxHeight: 500 }} className='Bike-card'>
           <CardHeader 
             action={
@@ -148,6 +149,8 @@ export default function All_Card() {
           </CardContent>
           </Card>
         </Stack>
+
+        
       </Box>
     );
   }
